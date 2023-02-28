@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificar hora</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header class="title">
+        <h1 class="title-text">Hora do dia</h1>
+    </header>
+    <section class="main-section">
+        <div class="up-section">
+            <p class="hours">Agora são <span class="hora">...</span> horas.</p>
+        </div>
+        <div class="down-section">
+            <img class="img" src="Depositphotos_48805319_xl-2015-960x640.jpg" alt="img.jpg">
+        </div>
+    </section>
+    <footer class="footer">
+        <p class="footer-text">Made by: Bruno</p>
+    </footer>
+
+    <script>
+        let data = new Date()
+        var hora = data.getHours()
+
+        var horaTexto = document.querySelector('span.hora')
+
+        horaTexto.innerHTML = hora
+        if(hora <= 12) {
+            document.body.style.backgroundColor = '#d1be82'
+        } else if (hora >= 12 && hora < 18) {
+            
+            document.body.style.backgroundColor = '#c56f00'
+        } else if (hora >= 18) {
+            document.querySelector('img.img').src="8900318-chuva-a-noite-fundo-escuro-tiro-de-chuva-caindo-gratis-foto.jpg"
+            document.body.style.backgroundColor = '#1c1c1c'
+        }
+    </script>
+</body>
+</html>
